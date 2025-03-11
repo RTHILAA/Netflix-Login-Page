@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("IMG/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Roboto", serif;
+}
+
+#logo {
+    padding: 25px 60px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#logo a img {
+    width: 160px;
+    transition: transform 0.3s ease;
+}
+
+#logo a img:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    width: 430px;
+    padding: 60px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Sign-in h2 {
+    font-size: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    background-color: #333;
+    transition: 0.3s ease;
+}
+
+input:hover {
+    background-color: #444;
+}
+
+input:focus {
+    background-color: #444;
+    transform: scale(1.02);
+}
+
+#Sign-In {
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transform: translateY(17px);
+    transition: 0.3s ease;
+}
+
+#Sign-In:hover {
+    background-color: #f40612;
+    transform: translateY(17px) scale(1.05);
+}
+
+#Sign-In:active {
+    transform: translateY(17px) scale(0.95);
+}
+
+.remember-help {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(10px);
+    color: #b3b3b3;
+    font-size: 14.5px;
+}
+
+.need-help a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.need-help a:hover {
+    text-decoration: underline;
+}
+
+#sign-up {
+    color: #b3b3b3;
+}
+
+#sign-up a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+#sign-up a:hover {
+    text-decoration: underline;
+}
+
+#recaptcha {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+#recaptcha a {
+    color: #0071eb;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#recaptcha a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 950px) and (max-width: 1150px) {
+    .content {
+        width: 380px;
+        padding: 50px;
+    }
+
+    .Sign-in h2 {
+        font-size: 28px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    #Sign-In {
+        font-size: 14px;
+    }
+
+    .remember-help {
+        font-size: 13px;
+    }
+
+    #recaptcha {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 950px) {
+    .content {
+        width: 350px;
+        padding: 40px;
+    }
+
+    .Sign-in h2 {
+        font-size: 25px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    #Sign-In {
+        font-size: 15px;
+    }
+
+    .remember-help {
+        font-size: 13px;
+    }
+
+    #recaptcha {
+        font-size: 13px;
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    #logo {
+        padding: 15px 30px;
+    }
+
+    #logo a img {
+        width: 120px;
+    }
+
+    .content {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .Sign-in h2 {
+        font-size: 20px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #Sign-In {
+        font-size: 12px;
+    }
+
+    .remember-help {
+        font-size: 11px;
+    }
+
+    #recaptcha {
+        font-size: 10px;
+    }
+}
